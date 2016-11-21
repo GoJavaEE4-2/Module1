@@ -30,8 +30,9 @@ customer_companie_id integer references COMPANIES(companie_id) NOT NULL
 );
 CREATE TABLE DEVELOPERS_SKILLS
 (
-  dev_id integer  NOT NULL,
-  skill_id integer NOT NULL
+  DeveloperID integer  NOT NULL,
+  SkillID integer NOT NULL,
+  SkillName character varying NOT NULL
 );
 
 Alter table DEVELOPERS_SKILLS add constraint dev_id_fk foreign key(dev_id) references DEVELOPERS(developer_id );
