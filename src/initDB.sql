@@ -14,6 +14,7 @@ create table PROJECTS(
  project_developer_id integer references DEVELOPERS(developer_id) NOT NULL,
  project_start_timestamp date NOT NULL
 );
+
 alter table PROJECTS add column cost numeric;
 
 create table COMPANIES(
