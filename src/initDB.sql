@@ -46,3 +46,8 @@ CREATE TABLE DEVELOPERS_Projects
 Alter table DEVELOPERS_Projects add constraint dev_id_fk foreign key(dev_id) references DEVELOPERS(developer_id );
 Alter table DEVELOPERS_Projects add constraint project_id_fk foreign key(project_id) references PROJECTS(project_id);
 
+create table COMPANIES_CUSTOMERS_PROJECTS(
+com_id integer references COMPANIES(companie_id) NOT NULL,
+cust_id integer references customers(customer_id) NOT NULL,
+proj_id integer references PROJECTS(project_id) NOT NULL
+);
