@@ -30,7 +30,7 @@ customer_companie_id integer references COMPANIES(companie_id) NOT NULL
 );
 CREATE TABLE DEVELOPERS_SKILLS
 (
-  developer_id integer  NOT NULL,
+
   skill_id integer NOT NULL,
   skill_name character varying NOT NULL
 );
