@@ -28,10 +28,8 @@ customer_id integer PRIMARY KEY NOT NULL,
 customer_name character varying NOT NULL,
 customer_companie_id integer references COMPANIES(companie_id) NOT NULL
 );
-CREATE TABLE DEVELOPERS_SKILLS
-(
-
-  skill_id integer NOT NULL,
+CREATE TABLE DEVELOPERS_SKILLS(
+ skill_id integer NOT NULL,
   skill_name character varying NOT NULL
 );
 
