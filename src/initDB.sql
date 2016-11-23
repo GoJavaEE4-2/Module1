@@ -1,8 +1,8 @@
 create table DEVELOPERS(
 developer_id serial NOT NULL,
 developer_name character varying NOT NULL,
-developer_company_id integer NOT NULL,
-developer_project_id integer NOT NULL,
+developer_company_id integer references COMPANIES(companie_id) NOT NULL,
+developer_project_id integer references PROJECTS(project_id) NOT NULL,
 developer_join_date date
 );
 
