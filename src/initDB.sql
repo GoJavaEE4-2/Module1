@@ -50,3 +50,10 @@ com_id integer references COMPANIES(companie_id) NOT NULL,
 cust_id integer references customers(customer_id) NOT NULL,
 proj_id integer references PROJECTS(project_id) NOT NULL
 );
+
+create table SKILLS(
+  developer_id integer references DEVELOPERS(developer_id) NOT NULL,
+  skill_id integer PRIMARY KEY NOT NULL,
+  skill_name character varying NOT NULL
+);
+
