@@ -1,5 +1,5 @@
 create table DEVELOPERS(
-developer_id serial NOT NULL,
+developer_id serial PRIMARY KEY NOT NULL,
 developer_name character varying NOT NULL,
 developer_company_id integer references COMPANIES(companie_id) NOT NULL,
 developer_project_id integer references PROJECTS(project_id) NOT NULL,
@@ -30,9 +30,8 @@ companie_project_id integer references PROJECTS(project_id) NOT NULL
 );
 
 create table CUSTOMERS(
-customer_id integer PRIMARY KEY NOT NULL,
-customer_name character varying NOT NULL,
-customer_companie_id integer references COMPANIES(companie_id) NOT NULL
+customer_id serial PRIMARY KEY NOT NULL,
+customer_name character varying NOT NULL
 );
 
 create table DEVELOPERS_SKILLS(
