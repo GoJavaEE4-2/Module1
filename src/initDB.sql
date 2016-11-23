@@ -28,13 +28,11 @@ customer_id integer PRIMARY KEY NOT NULL,
 customer_name character varying NOT NULL,
 customer_companie_id integer references COMPANIES(companie_id) NOT NULL
 );
-CREATE TABLE DEVELOPERS_SKILLS(
- skill_id integer NOT NULL,
-  skill_name character varying NOT NULL
-);
 
-Alter table DEVELOPERS_SKILLS add constraint dev_id_fk foreign key(dev_id) references DEVELOPERS(developer_id );
-Alter table DEVELOPERS_SKILLS add constraint skill_id_fk foreign key(skill_id) references SKILLS(skill_id);
+create table DEVELOPERS_SKILLS(
+  developer_id integer references DEVELOPERS(developer_id)  NOT NULL,
+  skill_id  integer   references SKILLS(skill_id) NOT NULL
+);
 
 CREATE TABLE DEVELOPERS_Projects
 (
