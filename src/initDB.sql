@@ -1,8 +1,8 @@
 create table DEVELOPERS(
-developer_id integer PRIMARY KEY NOT NULL,
+developer_id serial NOT NULL,
 developer_name character varying NOT NULL,
-developer_age smallint NOT NULL,
-developer_adress character varying,
+developer_company_id integer NOT NULL,
+developer_project_id integer NOT NULL,
 developer_join_date date
 );
 
