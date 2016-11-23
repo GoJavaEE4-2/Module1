@@ -52,8 +52,7 @@ proj_id integer references PROJECTS(project_id) NOT NULL
 );
 
 create table SKILLS(
-  developer_id integer references DEVELOPERS(developer_id) NOT NULL,
-  skill_id integer PRIMARY KEY NOT NULL,
+  skill_id SERIAL PRIMARY KEY NOT NULL,
   skill_name character varying NOT NULL
 );
 
