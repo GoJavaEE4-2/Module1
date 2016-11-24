@@ -22,7 +22,7 @@ create table PROJECTS(
  project_start_timestamp date NOT NULL
 );
 
-alter table PROJECTS add column cost real;
+alter table PROJECTS add column project_cost real;
 
 create table COMPANIES(
 companie_id integer PRIMARY KEY NOT NULL,

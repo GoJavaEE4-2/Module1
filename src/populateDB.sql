@@ -122,6 +122,28 @@ insert into PROJECTS (project_name, project_company_id, project_customer_id, pro
 ('project19', 1, 19, 2015-01-01),
 ('project20', 1, 20, 2015-01-01);
 
+insert into PROJECTS (project_cost) VALUES
+(100000),
+(7000000),
+(1000000000),
+(200000),
+(3000000),
+(400),
+(9000000),
+(150000),
+(4000000000),
+(300500),
+(18056843),
+(2230203823),
+(23423423425),
+(7896656),
+(907656656),
+(6666666666),
+(567567),
+(5655),
+(46245645654),
+(5464565656546);
+
 insert into COMPANIES (companie_name, companie_project_id) values
 ('Blue Fountain Media', NULL),
 ('BigDrop' , NULL),
