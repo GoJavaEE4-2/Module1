@@ -40,13 +40,4 @@ create table DEVELOPERS_SKILLS(
   skill_id  integer   references SKILLS(skill_id) NOT NULL
 );
 
-CREATE TABLE DEVELOPERS_Projects
-(
-  dev_id integer NOT NULL,
-  project_id integer NOT NULL
-);
-
-Alter table DEVELOPERS_Projects add constraint dev_id_fk foreign key(dev_id) references DEVELOPERS(developer_id );
-Alter table DEVELOPERS_Projects add constraint project_id_fk foreign key(project_id) references PROJECTS(project_id);
-
 
