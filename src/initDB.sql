@@ -17,7 +17,7 @@ create table SKILLS(
 create table PROJECTS(
  project_id serial PRIMARY KEY NOT NULL,
  project_name character varying NOT NULL,
- project_company_id integer references COMPANIES(companie_id) NOT NULL,
+   project_company_id integer references COMPANIES(companie_id) NOT NULL,
  project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
  project_start_timestamp date NOT NULL
 );
@@ -27,7 +27,7 @@ alter table PROJECTS add column cost numeric;
 create table COMPANIES(
 companie_id integer PRIMARY KEY NOT NULL,
 companie_name character varying NOT NULL,
-companie_project_id integer references PROJECTS(project_id) NOT NULL
+companie_project_id integer references PROJECTS(project_id)
 );
 
 create table CUSTOMERS(

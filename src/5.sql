@@ -1,1 +1,1 @@
-select min(project_cost)
+select customers.customer_name, projects.project_cost from PROJECTS join (select min(project_cost) from PROJECTS group by project_company_id);
