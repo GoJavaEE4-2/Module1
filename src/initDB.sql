@@ -6,7 +6,7 @@ developer_project_id integer references PROJECTS(project_id) NOT NULL,
 developer_join_date date
 );
 
-alter table DEVELOPERS add column salary real;
+alter table DEVELOPERS add column developer_salary real;
 
 create table SKILLS(
   skill_id SERIAL PRIMARY KEY NOT NULL,
