@@ -167,3 +167,25 @@ insert into skills (skill_name) VALUES
 ('Oracle'),
 ('Pyton'),
 ('.net');
+
+insert into customers (customer_name) values
+('customer1'),
+('customer2'),
+('customer3'),
+('customer4'),
+('customer5'),
+('customer6'),
+('customer7'),
+('customer8'),
+('customer9'),
+('customer10'),
+('customer11'),
+('customer12'),
+('customer13'),
+('customer14'),
+('customer15'),
+('customer16'),
+('customer17'),
+('customer18'),
+('customer19'),
+('customer20');
