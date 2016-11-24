@@ -9,13 +9,13 @@ developer_join_date date
 alter table DEVELOPERS add column developer_salary real;
 
 create table SKILLS(
-  skill_id SERIAL PRIMARY KEY NOT NULL,
+  skill_id serial PRIMARY KEY NOT NULL,
   skill_name character varying NOT NULL
 );
 
 
 create table PROJECTS(
- project_id SERIAL PRIMARY KEY NOT NULL,
+ project_id serial PRIMARY KEY NOT NULL,
  project_name character varying NOT NULL,
    project_company_id integer references COMPANIES(companie_id) NOT NULL,
  project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
@@ -25,9 +25,9 @@ create table PROJECTS(
 alter table PROJECTS add column project_cost real;
 
 create table COMPANIES(
-companie_id SERIAL PRIMARY KEY NOT NULL,
+companie_id serial PRIMARY KEY NOT NULL,
 companie_name character varying NOT NULL,
-companie_project_id SERIAL references PROJECTS(project_id)
+companie_project_id serial references PROJECTS(project_id)
 );
 
 create table CUSTOMERS(
