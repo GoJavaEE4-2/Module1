@@ -1,13 +1,3 @@
-create table DEVELOPERS(
-developer_id serial PRIMARY KEY NOT NULL,
-developer_name character varying NOT NULL,
-developer_company_id integer references COMPANIES(companie_id) NOT NULL,
-developer_project_id integer references PROJECTS(project_id) NOT NULL,
-developer_join_date date
-);
-
-alter table DEVELOPERS add column developer_salary real;
-
 create table SKILLS(
   skill_id serial PRIMARY KEY NOT NULL,
   skill_name character varying NOT NULL
@@ -35,9 +25,17 @@ customer_id serial PRIMARY KEY NOT NULL,
 customer_name character varying NOT NULL
 );
 
+create table DEVELOPERS(
+developer_id serial PRIMARY KEY NOT NULL,
+developer_name character varying NOT NULL,
+developer_company_id integer references COMPANIES(companie_id) NOT NULL,
+developer_project_id integer references PROJECTS(project_id) NOT NULL,
+developer_join_date date
+);
+
+alter table DEVELOPERS add column developer_salary real;
+
 create table DEVELOPERS_SKILLS(
   developer_id integer references DEVELOPERS(developer_id)  NOT NULL,
   skill_id  integer   references SKILLS(skill_id) NOT NULL
 );
-
-
