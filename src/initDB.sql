@@ -10,7 +10,7 @@ create table PROJECTS(
    project_company_id serial references COMPANIES(companie_id) NOT NULL,
  project_customer_id serial references CUSTOMERS(customer_id) NOT NULL,
  project_start_timestamp date NOT NULL,
- project_cost integer PRIMARY KEY NOT NULL
+
 );
 
 alter table PROJECTS add column project_cost real;
