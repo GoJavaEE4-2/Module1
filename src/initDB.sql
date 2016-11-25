@@ -7,9 +7,10 @@ create table SKILLS(
 create table PROJECTS(
  project_id serial PRIMARY KEY NOT NULL,
  project_name character varying NOT NULL,
-   project_company_id integer references COMPANIES(companie_id) NOT NULL,
- project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
- project_start_timestamp date NOT NULL
+   project_company_id serial references COMPANIES(companie_id) NOT NULL,
+ project_customer_id serial references CUSTOMERS(customer_id) NOT NULL,
+ project_start_timestamp date NOT NULL,
+ project_cost integer PRIMARY KEY NOT NULL
 );
 
 alter table PROJECTS add column project_cost real;
