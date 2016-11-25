@@ -5,7 +5,7 @@ create table SKILLS(
 
 
 create table PROJECTS(
- project_id serial PRIMARY KEY NOT NULL,
+ project_id serial references COMPANIES(companie_project_id),
  project_name character varying NOT NULL,
    project_company_id serial references COMPANIES(companie_id) NOT NULL,
  project_customer_id serial references CUSTOMERS(customer_id) NOT NULL,
@@ -18,7 +18,7 @@ alter table PROJECTS add column project_cost real;
 create table COMPANIES(
 companie_id serial PRIMARY KEY NOT NULL,
 companie_name character varying NOT NULL,
-companie_project_id serial references PROJECTS(project_id)
+companie_project_id serial PRIMARY KEY NOT NULL
 );
 
 create table CUSTOMERS(
