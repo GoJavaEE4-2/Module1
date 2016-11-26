@@ -5,10 +5,10 @@ create table SKILLS(
 
 
 create table PROJECTS(
- project_id serial references COMPANIES(companie_project_id),
+ project_id serial references COMPANIES,
  project_name character varying NOT NULL,
-   project_company_id serial references COMPANIES(companie_id) NOT NULL,
- project_customer_id serial references CUSTOMERS(customer_id) NOT NULL,
+   project_company_id integer references COMPANIES(companie_id) NOT NULL,
+ project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
  project_start_timestamp date NOT NULL,
 
 );
