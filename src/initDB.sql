@@ -5,7 +5,7 @@ create table SKILLS(
 
 
 create table PROJECTS(
- project_id serial references COMPANIES,
+ project_id serial ,
  project_name character varying NOT NULL,
    project_company_id integer references COMPANIES(companie_id) NOT NULL,
  project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
