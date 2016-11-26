@@ -16,9 +16,9 @@ create table PROJECTS(
 alter table PROJECTS add column project_cost real;
 
 create table COMPANIES(
-companie_id serial PRIMARY KEY NOT NULL,
+companie_id serial NOT NULL,
 companie_name character varying NOT NULL,
-companie_project_id serial PRIMARY KEY NOT NULL
+companie_project_id serial NOT NULL
 );
 
 create table CUSTOMERS(
