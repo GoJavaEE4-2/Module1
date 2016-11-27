@@ -21,7 +21,6 @@ project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
 project_start_timestamp date NOT NULL,
 );
 
-alter table PROJECTS add column project_cost real;
 
 drop table if exist COMPANIES;
 
@@ -41,7 +40,6 @@ developer_project_id integer references PROJECTS(project_id) NOT NULL,
 developer_join_date date
 );
 
-alter table DEVELOPERS add column developer_salary real;
 
 drop table if exist DEVELOPERS_SKILLS;
 
