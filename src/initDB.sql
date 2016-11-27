@@ -35,8 +35,7 @@ drop table if exists COMPANIES;
 
 create table COMPANIES(
 companie_id serial PRIMARY KEY NOT NULL,
-companie_name character varying NOT NULL,
-companie_project_id serial NOT NULL
+companie_name character varying NOT NULL
 );
 
 drop table if exists DEVELOPERS;
