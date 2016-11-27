@@ -34,7 +34,7 @@ drop table if exists DEVELOPERS;
 create table PROJECTS(
 project_id serial  PRIMARY KEY, NOT NULL,
 project_name character varying NOT NULL,
-project_company_id integer references  COMPANIES(companie_id)
+project_company_id integer references  COMPANIES(companie_id),
 project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
 project_start_timestamp date NOT NULL
 
