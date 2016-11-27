@@ -1,3 +1,5 @@
+START TRANSACTION;
+
 insert into skills (skill_name) VALUES
 ('C++'),
 ('Java'),
@@ -9,6 +11,10 @@ insert into skills (skill_name) VALUES
 ('Oracle'),
 ('Pyton'),
 ('.net');
+
+COMMIT;
+
+START TRANSACTION;
 
 insert into customers (customer_name) values
 ('customer1'),
@@ -32,6 +38,10 @@ insert into customers (customer_name) values
 ('customer19'),
 ('customer20');
 
+COMMIT;
+
+START TRANSACTION;
+
 insert into COMPANIES (companie_name) values
 ('Blue Fountain Media'),
 ('BigDrop'),
@@ -43,6 +53,10 @@ insert into COMPANIES (companie_name) values
 ('IT CRAFT'),
 ('Konstant Infosolutions'),
 ('Forix');
+
+COMMIT;
+
+START TRANSACTION;
 
 insert into PROJECTS (project_name, project_company_id, project_customer_id, project_start_timestamp) VALUES
 ('project1', 1, 1, '2015-01-01'),
@@ -66,6 +80,9 @@ insert into PROJECTS (project_name, project_company_id, project_customer_id, pro
 ('project19', 10, 19, '2015-01-01'),
 ('project20', 10, 20, '2015-01-01');
 
+COMMIT;
+
+START TRANSACTION;
 
 insert into DEVELOPERS (developer_name, developer_company_id, developer_project_id, developer_join_date) values
 ('Lionel Messi',1,1,'2016-01-01'),
@@ -169,6 +186,10 @@ insert into DEVELOPERS (developer_name, developer_company_id, developer_project_
 ('Diego Forlan',10,20,'2016-01-9'),
 ('Paulinho',10,20,'2016-01-10');
 
+COMMIT;
+
+START TRANSACTION;
+
 insert into DEVELOPERS_SKILLS (developer_id, skill_id) values
 (1,1),
 (1,2),
@@ -211,6 +232,9 @@ insert into DEVELOPERS_SKILLS (developer_id, skill_id) values
 (4,9),
 (4,10);
 
+COMMIT;
+
+START TRANSACTION;
 
 update PROJECTS set project_cost = 100000 where project_id = 1;
 update PROJECTS set project_cost = 93847543875 where project_id = 2;
@@ -233,6 +257,9 @@ update PROJECTS set project_cost = 73857348654 where project_id = 18;
 update PROJECTS set project_cost = 9827387234623 where project_id = 19;
 update PROJECTS set project_cost = 8476534765473 where project_id = 20;
 
+COMMIT;
+
+START TRANSACTION;
 
 update DEVELOPERS set developer_salary =10000 where developer_id = 1;
 update DEVELOPERS set developer_salary =10001 where developer_id = 2;
@@ -335,3 +362,4 @@ update DEVELOPERS set developer_salary =10097 where developer_id = 98;
 update DEVELOPERS set developer_salary =10098 where developer_id = 99;
 update DEVELOPERS set developer_salary =10099 where developer_id = 100;
 
+COMMIT;
