@@ -1,0 +1,1 @@
+alter table PROJECTS add column project_cost real;

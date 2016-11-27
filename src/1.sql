@@ -1,0 +1,1 @@
+alter table DEVELOPERS add column developer_salary real;
