@@ -1,8 +1,8 @@
 drop table if exist SKILLS;
 
 create table SKILLS(
-  skill_id serial PRIMARY KEY NOT NULL,
-  skill_name character varying NOT NULL
+skill_id serial PRIMARY KEY NOT NULL,
+skill_name character varying NOT NULL
 );
 drop table if exist CUSTOMERS;
 
@@ -14,7 +14,7 @@ customer_name character varying NOT NULL
 drop table if exist PROJECTS;
 
 create table PROJECTS(
-project_id serial ,
+project_id serial PRIMARY KEY NOT NULL,
 project_name character varying NOT NULL,
 project_company_id integer NOT NULL,
 project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
