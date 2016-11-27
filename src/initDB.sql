@@ -23,8 +23,16 @@ customer_name character varying NOT NULL
 
 drop table if exists PROJECTS;
 
+
+create table COMPANIES(
+companie_id serial PRIMARY KEY NOT NULL,
+companie_name character varying NOT NULL
+);
+
+drop table if exists DEVELOPERS;
+
 create table PROJECTS(
-project_id serial PRIMARY KEY NOT NULL,
+project_id serial  references COMPANIES(companie_project_id), NOT NULL,
 project_name character varying NOT NULL,
 project_company_id integer NOT NULL,
 project_customer_id integer references CUSTOMERS(customer_id) NOT NULL,
@@ -33,12 +41,6 @@ project_start_timestamp date NOT NULL
 
 drop table if exists COMPANIES;
 
-create table COMPANIES(
-companie_id serial PRIMARY KEY NOT NULL,
-companie_name character varying NOT NULL
-);
-
-drop table if exists DEVELOPERS;
 
 create table DEVELOPERS(
 developer_id serial PRIMARY KEY NOT NULL,
