@@ -1,1 +1,1 @@
-SELECT SUM(salary) from developers
+SELECT SUM(salary) from developers;
