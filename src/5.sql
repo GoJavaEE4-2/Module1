@@ -1,2 +1,5 @@
-select customer_name from customers as c LEFT JOIN projects as p on c.customer_id = p.project_customer_id
-WHERE project_cost = (SELECT min(project_cost) FROM projects);
+SELECT customers.customer_name, min(projects.project_cost) AS min FROM customers
+JOIN projects
+ON customers.customer_id = projects.project_customer_id
+GROUP BY customers.customer_name
+ORDER BY min LIMIT 1;
