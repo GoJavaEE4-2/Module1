@@ -1,4 +1,13 @@
-select * from projects as d inner join developers as  dp on d.id = dp.dev_id
-where dp.project_id = (select id from projects where cost = (select max(cost) from developers) )
+select sum(developer_salary) as sumsalary, project_name as projname
+from
+developers, projects
+where
+developer_project_id = projects.project_id
+GROUP BY
+projname
+ORDER BY
+sumsalary desc LIMIT 1;
 
 -- Найти самый дорогой проект (исходя из ЗП разработчиков).
+
+
